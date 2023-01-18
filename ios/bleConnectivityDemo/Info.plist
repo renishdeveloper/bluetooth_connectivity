@@ -36,7 +36,9 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>Requires Location permission for demo purposes.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Requires Bluetooth for demo purposes.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
