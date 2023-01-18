@@ -7,6 +7,7 @@ import {
   View,
   Text,
   PermissionsAndroid,
+  ToastAndroid,
 } from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {BleManager} from 'react-native-ble-plx';
@@ -28,6 +29,10 @@ function App(): JSX.Element {
       if (granted) {
         ble.startDeviceScan(null, null, async (error, device) => {
           console.log('DEVICE', device?.id, await device?.isConnected());
+          ToastAndroid.show(
+            `DEVICE ${device?.id} is connected, check log for more info`,
+            ToastAndroid.SHORT,
+          );
           ble.stopDeviceScan();
 
           ble.onStateChange(state => {
